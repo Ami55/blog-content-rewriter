@@ -1,0 +1,6 @@
+{
+  "name": "Blog Content Rewriter",
+  "description": "Rewrite and expand existing articles while preserving important links, images, facts, and brand style.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
