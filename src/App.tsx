@@ -21,7 +21,7 @@ import {
   ProjectStatus 
 } from './types';
 import { 
-  TOURS_BY_LOCALS_GUIDELINES, 
+  TRAVEL_EDITORIAL_GUIDELINES, 
   DEMO_PROJECT, 
   EMPTY_BRAND_GUIDELINES 
 } from './constants';
@@ -32,7 +32,7 @@ export default function App() {
   // Input form state
   const [articleText, setArticleText] = useState('');
   const [articleUrl, setArticleUrl] = useState('');
-  const [brandGuidelines, setBrandGuidelines] = useState<BrandGuidelines>(TOURS_BY_LOCALS_GUIDELINES);
+  const [brandGuidelines, setBrandGuidelines] = useState<BrandGuidelines>(TRAVEL_EDITORIAL_GUIDELINES);
   const [rewriteLevel, setRewriteLevel] = useState<RewriteLevel>('rewrite');
   const [selectedExpansions, setSelectedExpansions] = useState<string[]>([
     'improve_intro',
@@ -112,7 +112,7 @@ export default function App() {
     setCurrentProject(null);
     setArticleText('');
     setArticleUrl('');
-    setBrandGuidelines(TOURS_BY_LOCALS_GUIDELINES);
+    setBrandGuidelines(TRAVEL_EDITORIAL_GUIDELINES);
     setRewriteLevel('rewrite');
     setTargetAudience('');
     setPrimaryTopic('');

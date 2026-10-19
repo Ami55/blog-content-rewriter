@@ -16,13 +16,13 @@ export const EXPANSION_OPTIONS = [
   { id: 'add_cta', label: 'Add a relevant call to action', description: 'Invite readers to explore local guided experiences respectfully.' },
 ];
 
-export const TOURS_BY_LOCALS_GUIDELINES: BrandGuidelines = {
+export const TRAVEL_EDITORIAL_GUIDELINES: BrandGuidelines = {
   tone: 'Clear, friendly, down-to-earth, knowledgeable, inclusive, and practical. Tone must be suited for an engaged audience aged 55+.',
   preferredTerms: [
-    'guides on ToursByLocals',
+    'independent guides',
     'local guides',
-    'tours on ToursByLocals',
-    'private tours available through ToursByLocals',
+    'private tours',
+    'private guided experiences',
     'local guide experiences',
   ],
   prohibitedTerms: [
@@ -56,7 +56,7 @@ export const TOURS_BY_LOCALS_GUIDELINES: BrandGuidelines = {
     'Do not invent unverified pricing, exact hours or guide names',
     'Preserve all valid existing URLs and links with contextual anchor text',
   ],
-  ctaGuidance: 'Respectful, natural invitation to explore walking tours with local guides on ToursByLocals without pushy or sales-heavy language.',
+  ctaGuidance: 'Respectful, natural invitation to explore walking tours with local guides without pushy or sales-heavy language.',
   styleRestrictions: [
     'Never invent quotes or fictional guide personas',
     'Never use promotional travel buzzwords',
@@ -65,7 +65,7 @@ export const TOURS_BY_LOCALS_GUIDELINES: BrandGuidelines = {
   ],
   rawText: `Editorial Tone: Friendly, knowledgeable, grounded, inclusive.
 Spelling: Canadian English (e.g., colour, neighbourhood, traveller, centre).
-Terminology: Never say "our guides" or "our tours". Use "guides on ToursByLocals" or "local guides".
+Terminology: Never say "our guides" or "our tours". Use "independent guides" or "local guides".
 Banned Buzzwords: nestled, perched, tucked away, known for, home to, pulses, vibrant, bustling, iconic, must-see, hidden gem, in the heart of, perfect for.`,
   isCustom: false,
   isSupplied: true,
@@ -93,7 +93,7 @@ Edinburgh's Old Town is nestled in the heart of Scotland's historic capital and 
 
 ## What to see
 
-First, you must visit Edinburgh Castle, perched atop an extinct volcano. Tickets cost £19.50 and it opens at 9:30 AM daily. It is known for housing the Honours of Scotland. Check out [our tours](https://www.toursbylocals.com/Edinburgh-Tours) to see it with our guides.
+First, you must visit Edinburgh Castle, perched atop an extinct volcano. Tickets cost £19.50 and it opens at 9:30 AM daily. It is known for housing the Honours of Scotland. Check out [our tours](https://example.com/Edinburgh-Tours) to see it with our guides.
 
 Next, walk down the Royal Mile. It is picturesque and has something for everyone. Stop by St Giles' Cathedral which is nestled midway down the street. 
 
@@ -107,7 +107,7 @@ There are many quaint pubs on Victoria Street where you can taste traditional ha
 
 For more information on Scotland excursions, explore [Historic Environment Scotland](https://www.historicenvironment.scot) for castle tickets.
 
-Book one of [our guides](https://www.toursbylocals.com/Edinburgh-Tours) today for the ultimate unforgettable tour!`;
+Book one of [our guides](https://example.com/Edinburgh-Tours) today for the ultimate unforgettable tour!`;
 
 export const DEMO_REWRITTEN_ARTICLE = `# Exploring Edinburgh's Historic Old Town: A Practical Visitor's Guide
 
@@ -133,7 +133,7 @@ Situated midway along the Royal Mile, St Giles' Cathedral features a distinctive
 
 [IMAGE: https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1200&q=80 | Alt text: St Giles Cathedral on the Royal Mile with historic cobblestone foreground | Credit: Photo by Scottish Heritage Archive]
 
-Branching off either side of the main street are narrow alleyways known locally as *closes* or *wynds*. Marco, a professional guide on ToursByLocals who conducts historic walks across Lothian, notes:
+Branching off either side of the main street are narrow alleyways known locally as *closes* or *wynds*. Marco, a professional local guide who conducts historic walks across Lothian, notes:
 
 > "The secret closes off the Royal Mile hide four hundred years of underground stories that casual tourists walk right past without noticing."
 
@@ -160,15 +160,15 @@ Old Town is built across a dramatic ridge. Walking involves steep gradients, une
 
 ## Planning Your Next Steps
 
-Exploring Edinburgh's Old Town is most rewarding when taken at an unhurried pace, leaving time to wander off the main thoroughfare into historic closes. For travellers seeking customised itineraries, private walking tours arranged with [local guides on ToursByLocals](https://www.toursbylocals.com/Edinburgh-Tours) provide flexible, accessible routes suited to your interests.`;
+Exploring Edinburgh's Old Town is most rewarding when taken at an unhurried pace, leaving time to wander off the main thoroughfare into historic closes. For travellers seeking customised itineraries, private walking tours arranged with [local guides](https://example.com/Edinburgh-Tours) provide flexible, accessible routes suited to your interests.`;
 
 export const DEMO_PROJECT: ProjectState = {
   id: 'demo-edinburgh-old-town',
   title: 'A Practical Guide to Edinburgh Historic Old Town',
   originalArticle: DEMO_ORIGINAL_ARTICLE,
   originalUrl: 'https://example.com/edinburgh-old-town-guide',
-  rawBrandGuidelines: TOURS_BY_LOCALS_GUIDELINES.rawText,
-  brandGuidelines: TOURS_BY_LOCALS_GUIDELINES,
+  rawBrandGuidelines: TRAVEL_EDITORIAL_GUIDELINES.rawText,
+  brandGuidelines: TRAVEL_EDITORIAL_GUIDELINES,
   rewriteLevel: 'rewrite',
   selectedExpansions: [
     'improve_intro',
@@ -222,7 +222,7 @@ export const DEMO_PROJECT: ProjectState = {
       id: 'sec-4',
       heading: "St Giles' Cathedral and Historic Closes",
       level: 3,
-      content: `Situated midway along the Royal Mile, St Giles' Cathedral features a distinctive 15th-century crown spire and intricate Thistle Chapel carvings. Entry is free, with voluntary donations welcomed to support building conservation.\n\n[IMAGE: https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1200&q=80 | Alt text: St Giles Cathedral on the Royal Mile with historic cobblestone foreground | Credit: Photo by Scottish Heritage Archive]\n\nBranching off either side of the main street are narrow alleyways known locally as *closes* or *wynds*. Marco, a professional guide on ToursByLocals who conducts historic walks across Lothian, notes:\n\n> "The secret closes off the Royal Mile hide four hundred years of underground stories that casual tourists walk right past without noticing."\n\nNotable closes to explore include Lady Stair's Close (home to the Scottish Writers' Museum), Advocate's Close (offering framed views of Princes Street Gardens), and Mary King's Close (a preserved 17th-century subterranean street).`,
+      content: `Situated midway along the Royal Mile, St Giles' Cathedral features a distinctive 15th-century crown spire and intricate Thistle Chapel carvings. Entry is free, with voluntary donations welcomed to support building conservation.\n\n[IMAGE: https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1200&q=80 | Alt text: St Giles Cathedral on the Royal Mile with historic cobblestone foreground | Credit: Photo by Scottish Heritage Archive]\n\nBranching off either side of the main street are narrow alleyways known locally as *closes* or *wynds*. Marco, a professional local guide who conducts historic walks across Lothian, notes:\n\n> "The secret closes off the Royal Mile hide four hundred years of underground stories that casual tourists walk right past without noticing."\n\nNotable closes to explore include Lady Stair's Close (home to the Scottish Writers' Museum), Advocate's Close (offering framed views of Princes Street Gardens), and Mary King's Close (a preserved 17th-century subterranean street).`,
       originalContent: `Next, walk down the Royal Mile. It is picturesque and has something for everyone. Stop by St Giles' Cathedral which is nestled midway down the street. Our local guide Marco says: "The secret closes off the Royal Mile hide four hundred years of underground stories that casual tourists walk right past without noticing."`,
       changeType: 'expanded',
       isAccepted: true,
@@ -249,7 +249,7 @@ export const DEMO_PROJECT: ProjectState = {
       id: 'sec-7',
       heading: 'Planning Your Next Steps',
       level: 2,
-      content: `Exploring Edinburgh's Old Town is most rewarding when taken at an unhurried pace, leaving time to wander off the main thoroughfare into historic closes. For travellers seeking customised itineraries, private walking tours arranged with [local guides on ToursByLocals](https://www.toursbylocals.com/Edinburgh-Tours) provide flexible, accessible routes suited to your interests.`,
+      content: `Exploring Edinburgh's Old Town is most rewarding when taken at an unhurried pace, leaving time to wander off the main thoroughfare into historic closes. For travellers seeking customised itineraries, private walking tours arranged with [local guides](https://example.com/Edinburgh-Tours) provide flexible, accessible routes suited to your interests.`,
       originalContent: `Book one of our guides today for the ultimate unforgettable tour!`,
       changeType: 'rewritten',
       isAccepted: true,
@@ -259,12 +259,12 @@ export const DEMO_PROJECT: ProjectState = {
     {
       id: 'link-1',
       originalAnchor: 'our tours',
-      originalUrl: 'https://www.toursbylocals.com/Edinburgh-Tours',
-      newAnchor: 'local guides on ToursByLocals',
+      originalUrl: 'https://example.com/Edinburgh-Tours',
+      newAnchor: 'local guides',
       newPlacement: 'Planning Your Next Steps (Conclusion)',
       isInternal: true,
       status: 'preserved',
-      reason: 'Destination ToursByLocals URL preserved exactly, anchor text corrected to meet brand guideline: "local guides on ToursByLocals".',
+      reason: 'Sample destination URL preserved exactly, anchor text corrected to meet brand guideline: "local guides".',
     },
     {
       id: 'link-2',
@@ -279,8 +279,8 @@ export const DEMO_PROJECT: ProjectState = {
     {
       id: 'link-3',
       originalAnchor: 'our guides',
-      originalUrl: 'https://www.toursbylocals.com/Edinburgh-Tours',
-      newAnchor: 'local guides on ToursByLocals',
+      originalUrl: 'https://example.com/Edinburgh-Tours',
+      newAnchor: 'local guides',
       newPlacement: 'Planning Your Next Steps (Conclusion)',
       isInternal: true,
       status: 'preserved',
@@ -340,7 +340,7 @@ export const DEMO_PROJECT: ProjectState = {
       id: 'bc-1',
       rule: 'Prohibit "our guides" / "our tours"',
       issue: 'Original text used "our tours" and "our guides".',
-      fixApplied: 'Replaced with "guides on ToursByLocals" and "local guides".',
+      fixApplied: 'Replaced with "independent guides" and "local guides".',
       severity: 'pass',
     },
     {
@@ -361,7 +361,7 @@ export const DEMO_PROJECT: ProjectState = {
       id: 'bc-4',
       rule: 'Active Guide Quote Preservation',
       issue: 'Guide-led article indicated active guide Marco.',
-      fixApplied: 'Preserved verbatim quote and attributed properly: "Marco, a professional guide on ToursByLocals who conducts historic walks across Lothian".',
+      fixApplied: 'Preserved verbatim quote and attributed properly: "Marco, a professional local guide who conducts historic walks across Lothian".',
       severity: 'pass',
     },
     {

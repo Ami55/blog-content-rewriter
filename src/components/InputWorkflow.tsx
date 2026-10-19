@@ -11,7 +11,7 @@ import {
   Check
 } from 'lucide-react';
 import { BrandGuidelines, GuideLedOption, RewriteLevel } from '../types';
-import { EXPANSION_OPTIONS, TOURS_BY_LOCALS_GUIDELINES, EMPTY_BRAND_GUIDELINES } from '../constants';
+import { EXPANSION_OPTIONS, TRAVEL_EDITORIAL_GUIDELINES, EMPTY_BRAND_GUIDELINES } from '../constants';
 import { proxyRequest } from '../lib/api';
 
 interface InputWorkflowProps {
@@ -76,7 +76,7 @@ export const InputWorkflow: React.FC<InputWorkflowProps> = ({
   const [inputTab, setInputTab] = useState<'paste' | 'url' | 'upload'>('paste');
   const [isExtractingUrl, setIsExtractingUrl] = useState(false);
   const [urlError, setUrlError] = useState<string | null>(null);
-  const [guidelineMode, setGuidelineMode] = useState<'tbl' | 'custom' | 'none'>('tbl');
+  const [guidelineMode, setGuidelineMode] = useState<'travel' | 'custom' | 'none'>('travel');
   const [customGuidelineText, setCustomGuidelineText] = useState('');
   const [isAnalyzingGuidelines, setIsAnalyzingGuidelines] = useState(false);
   const [showGuidelineDetails, setShowGuidelineDetails] = useState(false);
@@ -173,10 +173,10 @@ export const InputWorkflow: React.FC<InputWorkflowProps> = ({
   };
 
   // Mode change
-  const handleGuidelineModeChange = (mode: 'tbl' | 'custom' | 'none') => {
+  const handleGuidelineModeChange = (mode: 'travel' | 'custom' | 'none') => {
     setGuidelineMode(mode);
-    if (mode === 'tbl') {
-      setBrandGuidelines(TOURS_BY_LOCALS_GUIDELINES);
+    if (mode === 'travel') {
+      setBrandGuidelines(TRAVEL_EDITORIAL_GUIDELINES);
     } else if (mode === 'none') {
       setBrandGuidelines(EMPTY_BRAND_GUIDELINES);
     } else if (mode === 'custom') {
@@ -379,16 +379,16 @@ export const InputWorkflow: React.FC<InputWorkflowProps> = ({
 
           <div className="inline-flex rounded-lg p-1 bg-slate-200/70 border border-slate-300/60 self-start sm:self-auto">
             <button
-              id="btn-guidelines-tbl"
+              id="btn-guidelines-travel"
               type="button"
-              onClick={() => handleGuidelineModeChange('tbl')}
+              onClick={() => handleGuidelineModeChange('travel')}
               className={`px-3 py-1 text-xs font-semibold rounded-md transition-all ${
-                guidelineMode === 'tbl'
+                guidelineMode === 'travel'
                   ? 'bg-white text-teal-900 shadow-xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              ToursByLocals (Default)
+              Travel Editorial (Default)
             </button>
             <button
               id="btn-guidelines-custom"
@@ -418,13 +418,13 @@ export const InputWorkflow: React.FC<InputWorkflowProps> = ({
         </div>
 
         <div className="p-4 sm:p-5 space-y-4">
-          {guidelineMode === 'tbl' && (
+          {guidelineMode === 'travel' && (
             <div className="rounded-lg bg-teal-50/60 border border-teal-200/80 p-4">
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-teal-700" />
                   <span className="text-xs font-bold text-teal-950 uppercase tracking-wide">
-                    ToursByLocals Preset Active
+                    Travel Editorial Preset Active
                   </span>
                 </div>
                 <button
@@ -444,7 +444,7 @@ export const InputWorkflow: React.FC<InputWorkflowProps> = ({
                 </div>
                 <div className="bg-white/80 p-2.5 rounded-md border border-teal-100">
                   <span className="font-semibold text-teal-950 block mb-1">Nomenclature:</span>
-                  <p className="text-slate-700">Use "guides on ToursByLocals" / "local guides". Avoid "our guides" / "our tours".</p>
+                  <p className="text-slate-700">Use "independent guides" / "local guides". Avoid "our guides" / "our tours".</p>
                 </div>
               </div>
 
